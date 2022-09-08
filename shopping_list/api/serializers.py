@@ -8,4 +8,5 @@ from shopping_list.models import ShoppingItem
 class ShoppingItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = ShoppingItem
-        fields = ["id", "name", "purchased"]
+        fields = ['id', 'name', 'purchased']
+        read_only_fields = ('id',)
